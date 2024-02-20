@@ -1,0 +1,18 @@
+
+    if (currencySelect.value == "dolar") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue / dolarToday)
+    }
+    if (currencySelect.value == "euro") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue / euroToday)
+    }
+
+
+        currencySelectFirst.value = currencySelect.value; // Atualiza o valor selecionado no primeiro seletor
+        convertValues();
+    }
